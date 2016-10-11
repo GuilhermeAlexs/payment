@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Payment</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCELAR</string>
+    <string name="payment">PAGAMENTO</string>
+    <string name="money">DINHEIRO</string>
+    <string name="card">CARTÃO</string>
+    <string name="to_pay">A PAGAR</string>
+</resources>

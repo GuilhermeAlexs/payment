@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:padding="20dp"
+            android:background="@color/colorBackgroundDark">
+
+            <TextView
+                android:id="@+id/lblPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/to_pay"
+                android:textStyle="bold"
+                android:textColor="@color/colorSecondaryText" />
+
+            <TextView
+                android:id="@+id/lblTotalPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:text="R$ 1.100,00"
+                android:textColor="@color/colorSecondaryText" />
+
+            <TextView
+                android:id="@+id/lblRemainingPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/lblPayment"
+                android:layout_alignRight="@id/lblTotalPayment"
+                android:layout_below="@id/lblPayment"
+                android:layout_marginTop="15dp"
+                android:text="R$1.100,00"
+                android:textSize="36sp"
+                android:textColor="@color/colorTextAccent" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:background="@color/colorBackgroundWhite"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="R$1.000,00"
+                android:textSize="26sp"
+                android:textColor="@color/colorPrimaryText"
+                android:inputType="numberDecimal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_gravity="center">
+                <Button
+                    android:id="@+id/btnCash"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:minHeight="0dp"
+                    android:gravity="center"
+                    style="@style/CustomRadioButton"
+                    android:text="@string/money"/>
+
+                <Button
+                    android:id="@+id/btnCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:minHeight="0dp"
+                    android:gravity="center"
+                    style="@style/CustomRadioButton"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/card"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/listPayment"
+                android:scrollbars="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="100dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="18dp"
+                android:background="@color/colorBackgroundWhite"
+                android:padding="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:background="@color/colorBackgroundWhite"
+            android:gravity="end|right">
+            <TextView
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:textColor="@color/colorPrimaryText"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/btnOK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/ok"
+                android:textColor="@color/colorPrimaryText"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

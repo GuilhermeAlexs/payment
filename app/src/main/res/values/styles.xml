@@ -1,0 +1,19 @@
+<resources>
+    <style name="Theme.MyDialog" parent="@style/Theme.AppCompat.Dialog">
+        <item name="colorPrimary">@color/colorBackgroundWhite</item>
+        <item name="colorPrimaryDark">@color/colorBackgroundDark</item>
+        <item name="colorAccent">@color/colorTextAccent</item>
+        <item name="colorControlNormal">@color/colorPrimaryText</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomRadioButton">
+        <item name="android:button">@android:color/transparent</item>
+        <item name="android:background">@drawable/button_radio_selector</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+    </style>
+</resources>
